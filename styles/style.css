@@ -11,6 +11,99 @@
 */
 
 .page {
+  color: var(--main-color, #000);
+  font-family: var(--font, Arial, sans-serif);
+  line-height: normal;
+  background-color: var(--bg-color, #fff);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--card-font-weight, 400);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  border: 2px solid #000;
+  inline-size: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
+  block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
+  font-family: var(--font-accent), sans-serif;
+}
+
+.header__container {
+  display: grid;
+  gap: 20px;
+}
+.header__logo {
+  font-size: var(--header-logo_font-size);
+}
+
+.header__title {
+  display: flex;
+  justify-content: center;
+  font-size: var(--header-title__font_size);
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  inline-size: clamp(23.438rem, 16.351rem + 30.235vw, 43.563rem);
+  /*block-size: clamp(47.5rem, 43.121rem + 18.685vw, 59.938rem);*/
+  border: var(--border-main);
+  margin-bottom: 49px;
+}
+
+.section__title {
+  font-size: 18px;
+  font-variation-settings: "wght" var(--card-font-weight, 800);
+  border-bottom: var(--border-main);
+  padding: 5px 7px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: var(--border-main);
+}
+
+.section__text {
+  display: grid;
+  margin: 28px 25px 25px 25px;
+  gap: 27px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: end;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 90%;
+  background-color: inherit;
+  margin-bottom: 25px;
+}
+
+.like-icon {
+  width: 47px;
+  height: 39px;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  margin-right: 25px;
 }
