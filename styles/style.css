@@ -149,7 +149,7 @@ header {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 90%;
@@ -164,6 +164,7 @@ header {
   width: 40px;
   height: 39px;
   border: none;
+  padding: 0;
 }
 
 .card__like-button {
@@ -171,6 +172,7 @@ header {
   width: 130px;
   height: 38px;
   margin-right: 25px;
+  border: 2px solid #000;
 }
 
 .card__like-button:focus-visible {
@@ -288,4 +290,8 @@ dialog::backdrop {
   position: fixed;
   inset: 0px;
   background: rgba(0, 0, 0, 0.8);
+}
+
+.sparks {
+  fill: none;
 }
