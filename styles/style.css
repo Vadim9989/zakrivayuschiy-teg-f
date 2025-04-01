@@ -33,7 +33,7 @@ header {
   inline-size: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   block-size: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
   font-family: var(--font-accent), sans-serif;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 .header__container {
@@ -61,7 +61,7 @@ header {
 
 .container {
   inline-size: clamp(23.438rem, 16.351rem + 30.235vw, 43.563rem);
-  background-color: #fff;
+  background-color: var(--background-color);
   border: var(--border-main);
   margin-bottom: 49px;
 }
@@ -145,10 +145,11 @@ header {
   line-height: 21px;
 }
 
-.card__icon-button {
+.button__item {
   display: flex;
   justify-content: end;
   align-items: center;
+  gap: 5px;
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 90%;
@@ -157,14 +158,38 @@ header {
 }
 
 .like-icon {
-  width: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
   height: 39px;
+  border: none;
 }
 
 .card__like-button {
+  position: relative;
   width: 130px;
   height: 38px;
   margin-right: 25px;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 #000;
+  transition: 0.3s ease;
+}
+
+.card__like-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+}
+
+.card__like-button:hover::after {
+  transform: scaleX(1);
 }
 
 .footer {
@@ -177,19 +202,59 @@ header {
 .save__button {
   display: flex;
   align-items: center;
+  position: relative;
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 90%;
   background-color: inherit;
+  color: #000;
   margin-bottom: 25px;
   gap: 8px;
   inline-size: 335px;
   block-size: 55px;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 .save__button .button__icon {
   margin-left: 14px;
+}
+
+.save__button:focus-visible {
+  box-shadow: 2px 2px 0 #000;
+  transition: 0.3s ease;
+}
+
+.save__button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+}
+
+.save__button:hover::after {
+  transform: scaleX(1);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.button__icon {
+  position: relative;
+  z-index: 1;
+
+  mix-blend-mode: difference;
+}
+
+.like-icon:focus-visible {
+  border: 2px solid #000;
+  transition: 0.3s ease;
 }
 
 .dialog {
