@@ -75,7 +75,6 @@ header {
 
 .image__wrapper {
   position: relative;
-  filter: opacity(90%);
 }
 
 .image {
@@ -87,35 +86,35 @@ header {
 }
 
 .image__bus-filter .image {
-  filter: blur(3px);
+  filter: blur(3px) opacity(90%);
 }
 
 .image__leaf-filter .image {
-  filter: contrast(105%);
+  filter: contrast(105%) opacity(90%);
 }
 
 .image__elephant-filter .image {
-  filter: brightness(105%);
+  filter: brightness(105%) opacity(90%);
 }
 
 .image__thoughtfulness-filter .image {
-  filter: hue-rotate(198deg);
+  filter: hue-rotate(198deg) opacity(90%);
 }
 
 .image__mountains-filter .image {
-  filter: invert(72%);
+  filter: invert(72%) opacity(90%);
 }
 
 .image__lake-filter .image {
-  filter: saturate(195%);
+  filter: saturate(195%) opacity(90%);
 }
 
 .image__run-filter .image {
-  filter: sepia(80%);
+  filter: sepia(80%) opacity(90%);
 }
 
 .image__place-filter .image {
-  filter: grayscale(20%);
+  filter: grayscale(20%) opacity(90%);
 }
 
 .card__label {
