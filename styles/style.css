@@ -212,7 +212,6 @@ header {
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 90%;
-  background-color: inherit;
   color: #000;
   margin-bottom: 25px;
   gap: 8px;
@@ -295,12 +294,11 @@ dialog::backdrop {
   inset: 0px;
   background: rgba(0, 0, 0, 0.8);
 }
+/*состояния сердца*/
 
 .sparks {
   opacity: 0;
 }
-
-/*состояния сердца*/
 
 .core {
   fill: transparent;
@@ -356,6 +354,7 @@ dialog::backdrop {
   animation: spark__show 0.3s ease-in 0.3s;
 }
 
+/*анимации для сердца*/
 @keyframes heart__scale {
   to {
     transform: scale(1);
@@ -364,6 +363,7 @@ dialog::backdrop {
     transform: scale(1.25);
   }
 }
+
 @keyframes spark__show {
   to {
     opacity: 0;
