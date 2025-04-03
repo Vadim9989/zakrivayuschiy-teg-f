@@ -137,6 +137,16 @@ header {
   }
 }
 
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 38px;
+  border: none;
+  padding: 0;
+}
+
 .section__text {
   display: grid;
   margin: 28px 25px 25px 25px;
@@ -155,16 +165,6 @@ header {
   line-height: 90%;
   background-color: inherit;
   margin-bottom: 25px;
-}
-
-.like-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 39px;
-  border: none;
-  padding: 0;
 }
 
 .card__like-button {
@@ -194,6 +194,10 @@ header {
   transform: scaleX(1);
 }
 
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -214,7 +218,7 @@ header {
   gap: 8px;
   inline-size: 335px;
   block-size: 55px;
-  background-color: var(--background-color);
+  background-color: #fff;
 }
 
 .save__button .button__icon {
@@ -293,5 +297,78 @@ dialog::backdrop {
 }
 
 .sparks {
-  fill: none;
+  opacity: 0;
+}
+
+/*состояния сердца*/
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.card__icon-button:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: heart__scale 0.3s ease-in;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: spark__show 0.3s ease-in 0.3s;
+}
+
+@keyframes heart__scale {
+  to {
+    transform: scale(1);
+  }
+  from {
+    transform: scale(1.25);
+  }
+}
+@keyframes spark__show {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
 }
