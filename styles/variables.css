@@ -26,9 +26,9 @@
       #d3d3d3 0px,
       #d3d3d3 2px,
       transparent 2px,
-      t ransparent 4px
+      transparent 4px
     ),
-    l inear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
 
   --accent-color: #000;
 
