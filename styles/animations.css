@@ -9,3 +9,22 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+/*анимации для сердца*/
+@keyframes heart__scale {
+  to {
+    transform: scale(1);
+  }
+  from {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes spark__show {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}

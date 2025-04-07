@@ -43,6 +43,10 @@ button:focus {
   outline: none;
 }
 
+figure {
+  margin: 0;
+}
+
 ul,
 ol {
   list-style: none;
