@@ -43,6 +43,7 @@
 .header__logo {
   font-size: var(--header-logo_font-size);
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .header__title {
@@ -146,6 +147,7 @@
   line-height: 90%;
   background-color: inherit;
   border: var(--border-main);
+  cursor: pointer;
 }
 
 .card__icon-button {
