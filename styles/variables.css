@@ -5,10 +5,10 @@
   --main-text-color: #000;
 
   --font-wgth: 400;
-  --font-wgth_bold: 700;
+  --font-wgth-bold: 700;
 
-  --header-logo_font-size: clamp(49px, 43.37px + 1.5vw, 65px);
-  --header-title__font_size: clamp(14px, 10.83px + 0.85vw, 23px);
+  --header-logo-font-size: clamp(49px, 43.37px + 1.5vw, 65px);
+  --header-title-font-size: clamp(14px, 10.83px + 0.85vw, 23px);
 
   --background-color: rgba(255, 255, 255, 1);
 
