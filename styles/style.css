@@ -200,7 +200,6 @@
 }
 
 .card__like-button {
-  position: relative;
   width: 130px;
   height: 38px;
   margin-right: 25px;
@@ -223,7 +222,6 @@
 .save__button {
   display: flex;
   align-items: center;
-  position: relative;
   gap: 8px;
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding: 15.5px 5px;
@@ -239,7 +237,6 @@
   z-index: 1;
   color: #fff;
   mix-blend-mode: difference;
-  height: 14px;
 }
 
 .button__icon {
@@ -267,7 +264,7 @@
 
 .dialog__button {
   inline-size: 293px;
-  padding: 12.5px 0;
+  padding: 11.1px 0;
   margin: 0 30px 30px 30px;
   text-transform: uppercase;
 }
@@ -358,5 +355,19 @@ dialog::backdrop {
     width: 28px;
     height: 28px;
     margin: 0;
+  }
+
+  .dialog {
+    inline-size: 341px;
+  }
+
+  .dialog__content {
+    inline-size: 257px;
+    margin: 30px 39px 30px 39px;
+  }
+
+  .dialog__button {
+    inline-size: 257px;
+    margin: 0 39px 30px 39px;
   }
 }
